@@ -2,7 +2,7 @@
  * For more details on how to configure Wrangler, refer to:
  * https://developers.cloudflare.com/workers/wrangler/configuration/
  */
-{
+ {
 	"$schema": "node_modules/wrangler/config-schema.json",
 	"name": "link-shortener",
 	"main": "src/index.js",
@@ -13,7 +13,16 @@
 	"upload_source_maps": true,
 	"compatibility_flags": [
 		"nodejs_compat"
-	]
+	],
+	"kv_namespaces": [
+		{
+			"binding": "LINKS",
+			"id": "8e7be03d52b94160a38606ddd69265cd"
+		}
+	],
+	"ai": {
+		"binding": "AI"
+	}
 	/**
 	 * Smart Placement
 	 * https://developers.cloudflare.com/workers/configuration/smart-placement/#smart-placement
